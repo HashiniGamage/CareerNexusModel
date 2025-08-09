@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Calendar, TrendingUp, Brain, BarChart3, User, LogOut } from 'lucide-react';
+import { Calendar, TrendingUp, Brain, BarChart3, User, LogOut, BookOpen, Target } from 'lucide-react';
 import IndustrySelector from './components/IndustrySelector';
 import PredictionDashboard from './components/PredictionDashboard';
 import ModelDownloader from './components/ModelDownloader';
@@ -167,6 +167,26 @@ function App() {
               Advanced AI models predict job demand trends for the next 24 months with high accuracy.
             </p>
           </div>
+
+          <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-6">
+            <div className="p-3 bg-purple-100 rounded-lg w-fit mb-4">
+              <Target className="h-6 w-6 text-purple-600" />
+            </div>
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">Skills Required</h3>
+            <p className="text-gray-600 text-sm">
+              Get skill recommendations based on industry trends and experience level.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-6">
+            <div className="p-3 bg-green-100 rounded-lg w-fit mb-4">
+              <BookOpen className="h-6 w-6 text-green-600" />
+            </div>
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">Education Pathways</h3>
+            <p className="text-gray-600 text-sm">
+              Discover relevant courses, certifications, and degree programs to boost your career.
+            </p>
+          </div>
         </div>
 
         {/* Selection Panel */}
@@ -246,15 +266,3 @@ function App() {
 }
 
 export default App;
-
-{
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist",
-  "framework": "vite",
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
-  ]
-}
